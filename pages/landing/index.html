@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang=pl>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name=description content="Opis strony dla SEO">
+    <meta name=author content="IT Sailors">
+    <title>Nazwa firmy</title>
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%
+            }
+            100% {
+                width: 0;
+                height: 0
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1
+        }
+
+        body:not(.loaded) {
+            overflow: hidden
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector("body").classList.add("loaded")
+            }, 300)
+        })
+    </script>
+    <link rel=icon href=../../assets/img/brand/favicon.png type=image/png>
+    <link rel=stylesheet href=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css>
+    <link rel=stylesheet href=../../assets/libs/%40fortawesome/fontawesome-free/css/all.min.css>
+    <link rel=stylesheet href=../../assets/css/its-brandkit.css id=stylesheet>
+</head>
+
+<body>
+<div class=preloader>
+    <div class="spinner-border text-primary" role=status><span class=sr-only>Zaczekaj...</span></div>
+</div>
+<header class="" id=header-main>
+    <!--<div id=navbar-top-main class="navbar-top py-1 navbar-light bg-white navbar-border">
+        <div class=container>
+            <div class="navbar-nav align-items-center">
+                <div class="d-none d-lg-inline-block"><span class="badge badge-sm badge-success mr-2">New</span> <a href=https://themes.getbootstrap.com/product/quick-website-ui-kit/ target=_blank class="navbar-text text-sm mr-3">Quick - Website UI Kit</a></div>
+                <div>
+                    <ul class=nav>
+                        <li class="nav-item dropdown ml-lg-2">
+                            <a class="nav-link px-0" href=# role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false data-offset=0,10><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/icons/flags/us.svg class="svg-inject icon-flag"> <span class="d-none d-lg-inline-block">United States</span> <span class=d-lg-none>EN</span></a>
+                            <div class="dropdown-menu dropdown-menu-sm">
+                                <a href=# class=dropdown-item><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/icons/flags/es.svg class="svg-inject icon-flag">Spanish</a>
+                                <a href=# class=dropdown-item><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/icons/flags/ro.svg class="svg-inject icon-flag">Romanian</a>
+                                <a href=# class=dropdown-item><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/icons/flags/gr.svg class="svg-inject icon-flag">Greek</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class=ml-auto>
+                    <ul class=nav>
+                        <li class=nav-item><a class=nav-link href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/pages/secondary/support.html>Support</a></li>
+                        <li class=nav-item><a href=# class=nav-link data-action=omnisearch-open data-target=#omnisearch><i data-feather=search></i></a></li>
+                        <li class="nav-item dropdown"><a class=nav-link href=# data-toggle=dropdown aria-haspopup=true aria-expanded=false><i data-feather=shopping-cart></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-md p-0">
+                                <div class="d-flex align-items-center p-4">
+                                    <div class="h6 mb-0">Shop UI</div><span class="badge badge-sm badge-success ml-2">Coming soon</span></div>
+                                <div class=row>
+                                    <div class="col-5 mx-auto"><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/svg/illustrations/illustration-11.svg class="svg-inject img-fluid"></div>
+                                </div>
+                                <div class="p-4 text-center"><a href=# class="btn btn-block btn-sm btn-neutral rounded-pill">Proceed to Checkout</a></div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link pr-0" href=# data-toggle=dropdown aria-haspopup=true aria-expanded=false><i data-feather=user></i></a>
+                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                <h6 class=dropdown-header>User menu</h6><a class=dropdown-item href=#><i data-feather=user></i>Account </a><a class=dropdown-item href=#><span class="float-right badge badge-danger">9</span> <i data-feather=message-circle></i>Messages </a><a class=dropdown-item href=#><i data-feather=settings></i>Settings</a>
+                                <div class=dropdown-divider></div><a class=dropdown-item href=#><i data-feather=log-out></i>Sign out</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-light bg-white" id=navbar-main>
+        <div class=container>
+            <a class=navbar-brand href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/index.html><img alt="Logo firmy" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/brand/daxrk.svg id=navbar-logo> </a>
+            <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button>
+            <div class="collapse navbar-collapse navbar-collapse-overlay" id=navbar-main-collapse>
+                <div class="collapse-header align-items-center">
+                    <div class=col-6>
+                        <a class=navbar-brand href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/index.html><img alt="Image placeholder" src=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/assets/img/brand/dark.svg></a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-main-collapse aria-controls=navbar-main-collapse aria-expanded=false aria-label="Toggle navigation"><i data-feather=x></i></button>
+                    </div>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class=nav-item><a class=nav-link href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/index.html>Strona główna</a></li>
+                    <li class=nav-item><a class=nav-link href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/index.html>Usługi</a></li>
+                    <li class=nav-item><a class=nav-link href=https://demo.webpixels.io/quick-website-ui-kit-v1.0.0/index.html>Realizacje</a></li>
+                </ul><a class="btn btn-sm d-none d-lg-inline-block btn-primary ml-auto" href=https://themes.getbootstrap.com/product/quick-website-ui-kit/ target=_blank>Kontakt</a>
+                <div class="d-lg-none p-4 text-center"><a href=https://themes.getbootstrap.com/product/quick-website-ui-kit/ class="btn btn-block btn-sm btn-neutral rounded-pill" target=_blank>Kontakt</a></div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id=omnisearch class=omnisearch>
+    <div class=container>
+        <div class=omnisearch-container>
+            <form class=omnisearch-form>
+                <div class=form-group>
+                    <div class="input-group input-group-merge input-group-flush">
+                        <div class=input-group-prepend><span class=input-group-text><i data-feather=search></i></span></div>
+                        <input type=text class=form-control placeholder="Type and hit enter ...">
+                    </div>
+                </div>
+            </form>
+            <div class=omnisearch-suggestions>
+                <h6 class=heading>Search Suggestions</h6>
+                <div class=row>
+                    <div class=col-sm-6>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class=list-link href=#><i data-feather=clock></i> <span>macbook pro</span> in Laptops</a></li>
+                            <li><a class=list-link href=#><i data-feather=clock></i> <span>iphone 8</span> in Smartphones</a></li>
+                            <li><a class=list-link href=#><i data-feather=clock></i> <span>macbook pro</span> in Laptops</a></li>
+                            <li><a class=list-link href=#><i data-feather=clock></i> <span>beats pro solo 3</span> in Headphones</a></li>
+                            <li><a class=list-link href=#><i data-feather=clock></i> <span>smasung galaxy 10</span> in Phones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="slice py-5 py-lg-7">
+    <div class=container>
+        <div class="row row-grid align-items-center">
+            <div class="col-12 col-md-5 col-lg-6 order-md-2">
+                <figure class=w-100><img alt="Image placeholder" src=../../assets/img/illustrations/construction_city.jpg class=img-fluid></figure>
+            </div>
+            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                <h1 class="display-4 text-center text-md-left mb-3">Usługi budowlane na najwyższym poziomie</h1>
+                <p class="lead text-center text-md-left text-muted">Jesteśmy firmą budowlaną z Katowic, która przez ostatnie 30 lat solidnej pracy zjednała sobie rzesze zadowolonych klientów i usatysfakcjonowanych partnerów biznesowych.</p>
+                <div class="text-center text-md-left mt-5"><a href=# class="btn btn-warning btn-icon"><span class=btn-inner--text>Oferowane usługi</span><span class=btn-inner--icon> <i data-feather=arrow-right></i></span></a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-3">
+    <div class=container>
+        <div class="card shadow-lg border-0" style="max-width: 100%;">
+            <div class="card-body px-5 py-5 text-center text-md-left">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h5 class="mb-2">Zainteresowany współpracą?</h5>
+                        <p class="mb-0">
+                            Skontaktuj się z nami, a postaramy się odpowiedzieć na każde Twoje pytanie.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                        <a href="#" class="btn btn-warning btn-icon rounded-pill">
+                    <span class="btn-inner--icon">
+                        <i data-feather="phone"></i>
+                    </span>
+                            <span class="btn-inner--text">Kontakt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice slice-lg delimiter-bottom">
+    <div class=container>
+        <div class="row row-grid">
+            <div class=col-lg-4>
+                <div class=pb-4>
+                    <div class="icon icon-lg"><img alt="Image placeholder" src=../../assets/img/illustrations/housing.svg class="svg-inject img-fluid" style=height:50px></div>
+                </div>
+                <h5>Budownictwo</h5>
+                <p class="text-muted mb-0">Budujemy domy jednorodzinne, osiedla, obiekty użyteczności publicznej.</p>
+            </div>
+            <div class=col-lg-4>
+                <div class=pb-4>
+                    <div class="icon icon-lg"><img alt="Image placeholder" src=../../assets/img/illustrations/maintenance.svg class="svg-inject img-fluid" style=height:50px></div>
+                </div>
+                <h5>Konserwacja</h5>
+                <p class="text-muted mb-0">Doglądamy Waszych obiektów, na bieżąco reagując na usterki i inne problemy.</p>
+            </div>
+            <div class=col-lg-4>
+                <div class=pb-4>
+                    <div class="icon icon-lg"><img alt="Image placeholder" src=../../assets/img/illustrations/restoration.svg class="svg-inject img-fluid" style=height:50px></div>
+                </div>
+                <h5>Renowacja</h5>
+                <p class="text-muted mb-0">Restaurujemy stare obiekty, takie jak kamienice, przywracając im dawny blask.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" tabindex=-1 role=dialog id=modal-cookies data-backdrop=false aria-labelledby=modal-cookies aria-hidden=true>
+    <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+        <div class="modal-content bg-dark">
+            <div class=modal-body>
+                <p class="text-sm text-white mb-3">Używamy ciasteczek, by móc dostarczać Ci naszych usług na najwyższym poziomie.</p><a href=../utility/cookies.html class="btn btn-sm btn-neutral" target=_blank>Dowiedz się więcej</a>
+                <button type=button class="btn btn-sm btn-primary mr-2" data-dismiss=modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src=../../assets/libs/jquery/dist/jquery.min.js></script>
+<script src=../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js></script>
+<script src=../../assets/libs/in-view/dist/in-view.min.js></script>
+<script src=../../assets/libs/sticky-kit/dist/sticky-kit.min.js></script>
+<script src=../../assets/libs/svg-injector/dist/svg-injector.min.js></script>
+<script src=../../assets/libs/feather-icons/dist/feather.min.js></script>
+<script src=../../assets/libs/imagesloaded/imagesloaded.pkgd.min.js></script>
+<script src=../../assets/libs/jquery.scrollbar/jquery.scrollbar.min.js></script>
+<script src=../../assets/libs/jquery-scroll-lock/dist/jquery-scrollLock.min.js></script>
+<script src=../../assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js></script>
+<script src=../../assets/js/its-brandkit.js></script>
+<script>
+    feather.replace({
+        width: "1em",
+        height: "1em"
+    })
+</script>
+</body>
+</html>
